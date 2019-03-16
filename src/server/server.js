@@ -23,7 +23,7 @@ app.post('/addData', exampleController.addData);
 // app.put('/editData', dataController.editData);
 app.delete('/deleteData', exampleController.deleteData);
 
-// react-router history catch-all serve index.html
+// catch all route for react-router
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../../public/index.html'));
 });
