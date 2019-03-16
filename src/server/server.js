@@ -23,6 +23,11 @@ app.post('/addData', exampleController.addData);
 // app.put('/editData', dataController.editData);
 app.delete('/deleteData', exampleController.deleteData);
 
+// react-router history catch-all serve index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../public/index.html'));
+});
+
 app.use(express.static(path.join(__dirname, '/../../dist')));
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }, (err) => {
