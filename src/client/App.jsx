@@ -10,10 +10,10 @@ const App = () => {
     <Router>
       <div className="App">
         <nav className="navbar">
-          <Link to="/" className="navbar-brand">MERN</Link>
-          <Link to="/pageOne" className="navbar-brand">Page One</Link>
-          <Link to="/pageTwo" className="navbar-brand">Page Two</Link>
-          <Link to="/pageThree" className="navbar-brand">Page Three</Link>
+          <Link to="/" className="navbar-item">MERN</Link>
+          <Link to="/pageOne" className="navbar-item">Page One</Link>
+          <Link to="/pageTwo" className="navbar-item">Page Two</Link>
+          <Link to="/pageThree" className="navbar-item">Page Three</Link>
         </nav>
         <Route exact path="/" />
         <Route path="/pageOne" component={PageOne} />
