@@ -1,5 +1,5 @@
 {
-  "name": "memo-it",
+  "name": "mern-stack-app-template",
   "version": "1.0.0",
   "main": "index.js",
   "author": "pg",
@@ -35,5 +35,11 @@
     "mongoose": "^5.4.19",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/components/setupTests.js"
+    ],
+    "verbose": false
   }
 }
