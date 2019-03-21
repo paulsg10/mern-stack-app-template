@@ -1,24 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import '../styles/App.css';
-import axios from 'axios';
+import PageOne from './components/PageOne';
+import PageTwo from './components/PageTwo';
+import PageThree from './components/PageThree';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  componentDidMount() {
-    // AXIOS call for initial HTTP request
-  }
-
-  render() {
-    return (
+const App = () => {
+  return (
+    <Router>
       <div className="App">
-        <h1>Hello, World!</h1>
+        <nav className="navbar">
+          <Link to="/" className="navbar-brand">MERN</Link>
+          <Link to="/pageOne" className="navbar-brand">Page One</Link>
+          <Link to="/pageTwo" className="navbar-brand">Page Two</Link>
+          <Link to="/pageThree" className="navbar-brand">Page Three</Link>
+        </nav>
+        <Route exact path="/" />
+        <Route path="/pageOne" component={PageOne} />
+        <Route path="/pageTwo" component={PageTwo} />
+        <Route path="/pageThree" component={PageThree} />
       </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;
